@@ -19,12 +19,13 @@ from gtts import gTTS
 import os
 from io import BytesIO
 import base64
+import openai
 
 video_path_response = "animations/adobestock-95385826-video-hd-preview-l3gl8iq5_7hhRHgCC (1).mp4"
 video_path_transition = "animations/adobestock-325606362-video-hd-preview-3odvyozu_QseLBMXP.mp4"
 video_path_sign_up = "animations/untitled-video-made-with-clipchamp-1_VX3IUxCI.mp4"
 
-
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def process_voice_input():
 
@@ -241,7 +242,7 @@ def main():
 
             # LLM
             # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo', openai_api_key=st.secrets["OPENAI_API_KEY"])
+            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
 
             # Prompt
             llm_prompt = ChatPromptTemplate(
@@ -309,7 +310,7 @@ def main():
 
             # LLM
             # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo', openai_api_key=st.secrets["OPENAI_API_KEY"])
+            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
 
             # Prompt
             llm_prompt = ChatPromptTemplate(

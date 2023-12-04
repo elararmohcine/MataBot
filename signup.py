@@ -15,13 +15,10 @@ def get_video_base64(video_path):
         st.error("Video file not found.")
 
 
-video_path_response = r"C:\Users\mohci\Downloads/adobestock-95385826-video-hd-preview-l3gl8iq5_7hhRHgCC (1).mp4"
-video_path_transition = r"C:\Users\mohci\Downloads/adobestock-325606362-video-hd-preview-3odvyozu_QseLBMXP.mp4"
-video_path_sign_up = r"C:\Users\mohci\Downloads/untitled-video-made-with-clipchamp-1_VX3IUxCI.mp4"
 
-video_base64_transition = get_video_base64(video_path_transition)
-video_base64_response = get_video_base64(video_path_response)
-video_base64_sign_up= get_video_base64(video_path_sign_up)
+video_path_sign_up = "animations/untitled-video-made-with-clipchamp-1_VX3IUxCI.mp4"
+
+video_base64_sign_up = get_video_base64(video_path_sign_up)
 def show_signup_page():
     st.title("")
     # Define column widths
