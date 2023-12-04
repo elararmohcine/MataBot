@@ -12,3 +12,4 @@ app11.py
 app12.py
 config.py
 .streamlit/secrets.toml
+.env
