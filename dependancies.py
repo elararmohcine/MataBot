@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 
 
-DETA_KEY = "DETA_KEY_PLACEHOLDER"
+DETA_KEY = st.secrets["DETA_KEY"]
 # Load the environment variables
 load_dotenv(".env")
 

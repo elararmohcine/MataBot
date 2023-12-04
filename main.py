@@ -4,6 +4,7 @@ from home import show_home_page
 from signup import show_signup_page
 from login import show_login_page
 
+st.secrets["OPENAI_API_KEY"]
 
 # if 'sidebar_state' not in st.session_state:
 #     st.session_state.sidebar_state = 'collapsed'
