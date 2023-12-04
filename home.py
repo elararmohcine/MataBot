@@ -1,10 +1,9 @@
 # home.py
 import streamlit as st
 
-if 'clicked_1' not in st.session_state:
-    st.session_state.clicked_1 = False
-if 'clicked_2' not in st.session_state:
-    st.session_state.clicked_2 = False
+# Utilisez st.session_state.get pour obtenir la valeur par défaut si la clé n'existe pas
+clicked_1 = st.session_state.get('clicked_1', False)
+clicked_2 = st.session_state.get('clicked_2', False)
 
 def clicked(button_id):
     if button_id == 1:
@@ -17,7 +16,8 @@ def show_home_page():
     st.button('Sign Up', on_click=clicked, args=[1])
     st.button('Login', on_click=clicked, args=[2])
 
-    if st.session_state.clicked_1:
+    # Utilisez st.session_state.get pour obtenir la valeur par défaut si la clé n'existe pas
+    if st.session_state.get('clicked_1', False):
         st.session_state.page = 'signup'
-    elif st.session_state.clicked_2:
+    elif st.session_state.get('clicked_2', False):
         st.session_state.page = 'login'
