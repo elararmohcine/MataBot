@@ -241,7 +241,7 @@ def main():
 
             # LLM
             # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
+            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo', openai_api_key=st.secrets["OPENAI_API_KEY"])
 
             # Prompt
             llm_prompt = ChatPromptTemplate(
@@ -309,7 +309,7 @@ def main():
 
             # LLM
             # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
+            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo', openai_api_key=st.secrets["OPENAI_API_KEY"])
 
             # Prompt
             llm_prompt = ChatPromptTemplate(
