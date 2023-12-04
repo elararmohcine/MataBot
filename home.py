@@ -5,6 +5,10 @@ import streamlit as st
 clicked_1 = st.session_state.get('clicked_1', False)
 clicked_2 = st.session_state.get('clicked_2', False)
 
+# Initialise la clé 'page' si ni 'clicked_1' ni 'clicked_2' n'ont été activés
+if not (clicked_1 or clicked_2):
+    st.session_state.page = 'home'
+
 def clicked(button_id):
     if button_id == 1:
         st.session_state.clicked_1 = True
