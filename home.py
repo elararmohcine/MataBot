@@ -1,9 +1,8 @@
 # home.py
 import streamlit as st
 
-if 'clicked' not in st.session_state:
-    st.session_state.clicked_1 = False
-    st.session_state.clicked_2 = False
+if 'page' not in st.session_state:
+    st.session_state.page = 'home'
 
 def clicked(button_id):
     if button_id == 1:
