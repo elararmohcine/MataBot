@@ -213,8 +213,8 @@ def main():
 
     # Set a default model
     if "openai_model" not in st.session_state:
-        # st.session_state["openai_model"] = "gpt-4"
-        st.session_state["openai_model"] = "gpt-3.5-turbo"
+        st.session_state["openai_model"] = "gpt-4"
+        # st.session_state["openai_model"] = "gpt-3.5-turbo"
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -241,8 +241,8 @@ def main():
             message_placeholder = st.empty()
 
             # LLM
-            # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
+            llm = ChatOpenAI(temperature=0, model_name='gpt-4')
+            # llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
 
             # Prompt
             llm_prompt = ChatPromptTemplate(
@@ -309,8 +309,8 @@ def main():
             message_placeholder = st.empty()
 
             # LLM
-            # llm = ChatOpenAI(temperature=0, model_name='gpt-4')
-            llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
+            llm = ChatOpenAI(temperature=0, model_name='gpt-4')
+            # llm = ChatOpenAI(temperature=0, model_name='gpt-3.5-turbo')
 
             # Prompt
             llm_prompt = ChatPromptTemplate(
